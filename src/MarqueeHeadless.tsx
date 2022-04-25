@@ -5,7 +5,8 @@ import { style } from './style'
 let jsx: typeof React.createElement = React.createElement
 
 try {
-  const emotion = await import('@emotion/react')
+  // eslint-disable-next-line @typescript-eslint/no-var-requires
+  const emotion = require('@emotion/react')
 
   if (emotion?.jsx !== undefined) {
     jsx = emotion.jsx
