@@ -2,7 +2,7 @@ import React, { StrictMode } from 'react'
 
 import { createRoot } from 'react-dom/client'
 
-import { Marquee } from '../src'
+import { Marquee, MarqueeHeadless } from '../src'
 
 const container = document.getElementById('app')
 
@@ -11,7 +11,9 @@ if (container) {
 
   root.render(
     <StrictMode>
-      <Marquee>Hello, world!</Marquee>
+      <Marquee styleType="css">CSS style</Marquee>
+      <Marquee styleType="js">JS style</Marquee>
+      <MarqueeHeadless>Emotion</MarqueeHeadless>
     </StrictMode>
   )
 }
