@@ -1,4 +1,4 @@
-import React, { FC, ReactNode } from 'react'
+import React, { CSSProperties, FC, ReactNode } from 'react'
 
 import { style } from './style'
 
@@ -26,7 +26,7 @@ export const MarqueeHeadless: FC<MarqueeHeadlessProps> = (props) => {
   const { children, overrides } = props
 
   const styleProps = {} as {
-    css?: any
+    css?: CSSProperties
     className?: string
   }
 
