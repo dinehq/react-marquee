@@ -4,6 +4,7 @@ specifiers:
   '@dinehq/project-config': ^1.0.1
   '@types/jest': ^27.4.1
   '@types/react': ^18.0.6
+  '@types/react-dom': ^18.0.2
   '@typescript-eslint/eslint-plugin': ^5.20.0
   '@typescript-eslint/parser': ^5.20.0
   c8: ^7.11.0
@@ -29,6 +30,7 @@ devDependencies:
   '@dinehq/project-config': 1.0.1_505a42a6f025d29334e0c493e2d48d36
   '@types/jest': 27.4.1
   '@types/react': 18.0.6
+  '@types/react-dom': 18.0.2
   '@typescript-eslint/eslint-plugin': 5.20.0_81f0d1a74f014d44d273bd1612c85fd9
   '@typescript-eslint/parser': 5.20.0_eslint@8.14.0+typescript@4.6.3
   c8: 7.11.2
@@ -217,6 +219,12 @@ packages:
 
   /@types/qs/6.9.7:
     resolution: {integrity: sha512-FGa1F62FT09qcrueBA6qYTrJPVDzah9a+493+o2PCXsesWHIn27G98TsSMs3WPNbZIEj4+VJf6saSFpvD+3Zsw==}
+    dev: true
+
+  /@types/react-dom/18.0.2:
+    resolution: {integrity: sha512-UxeS+Wtj5bvLRREz9tIgsK4ntCuLDo0EcAcACgw3E+9wE8ePDr9uQpq53MfcyxyIS55xJ+0B6mDS8c4qkkHLBg==}
+    dependencies:
+      '@types/react': 18.0.6
     dev: true
 
   /@types/react/18.0.6:
