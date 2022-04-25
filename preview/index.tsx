@@ -1,8 +1,17 @@
-import React from 'react'
+import React, { StrictMode } from 'react'
 
-import ReactDOM from 'react-dom'
+import { createRoot } from 'react-dom/client'
 
 import { Marquee } from '../src'
 
-// create a React app
-ReactDOM.render(<Marquee>Hello, world!</Marquee>, document.getElementById('app'))
+const container = document.getElementById('app')
+
+if (container) {
+  const root = createRoot(container)
+
+  root.render(
+    <StrictMode>
+      <Marquee>Hello, world!</Marquee>
+    </StrictMode>
+  )
+}
