@@ -3,7 +3,10 @@ lockfileVersion: 5.3
 specifiers:
   '@babel/core': ^7.17.9
   '@dinehq/project-config': ^1.0.1
+  '@emotion/css': ^11.9.0
+  '@emotion/primitives': ^11.0.0
   '@emotion/react': ^11.9.0
+  '@emotion/serialize': ^1.0.3
   '@types/jest': ^27.4.1
   '@types/node': ^17.0.26
   '@types/react': ^18.0.6
@@ -32,7 +35,10 @@ specifiers:
 devDependencies:
   '@babel/core': 7.17.9
   '@dinehq/project-config': 1.0.1_505a42a6f025d29334e0c493e2d48d36
+  '@emotion/css': 11.9.0_@babel+core@7.17.9
+  '@emotion/primitives': 11.0.0_696d72bcadebaaf341e06790272f8628
   '@emotion/react': 11.9.0_e7c53be29d0cf33e05dfabbe0af5a24f
+  '@emotion/serialize': 1.0.3
   '@types/jest': 27.4.1
   '@types/node': 17.0.26
   '@types/react': 18.0.6
@@ -342,12 +348,64 @@ packages:
       stylis: 4.0.13
     dev: true
 
+  /@emotion/css/11.9.0_@babel+core@7.17.9:
+    resolution: {integrity: sha512-S9UjCxSrxEHawOLnWw4upTwfYKb0gVQdatHejn3W9kPyXxmKv3HmjVfJ84kDLmdX8jR20OuDQwaJ4Um24qD9vA==}
+    peerDependencies:
+      '@babel/core': ^7.0.0
+    peerDependenciesMeta:
+      '@babel/core':
+        optional: true
+    dependencies:
+      '@babel/core': 7.17.9
+      '@emotion/babel-plugin': 11.9.2_@babel+core@7.17.9
+      '@emotion/cache': 11.7.1
+      '@emotion/serialize': 1.0.3
+      '@emotion/sheet': 1.1.0
+      '@emotion/utils': 1.1.0
+    dev: true
+
   /@emotion/hash/0.8.0:
     resolution: {integrity: sha512-kBJtf7PH6aWwZ6fka3zQ0p6SBYzx4fl1LoZXE2RrnYST9Xljm7WfKJrU4g/Xr3Beg72MLrp1AWNUmuYJTL7Cow==}
     dev: true
 
+  /@emotion/is-prop-valid/1.1.2:
+    resolution: {integrity: sha512-3QnhqeL+WW88YjYbQL5gUIkthuMw7a0NGbZ7wfFVk2kg/CK5w8w5FFa0RzWjyY1+sujN0NWbtSHH6OJmWHtJpQ==}
+    dependencies:
+      '@emotion/memoize': 0.7.5
+    dev: true
+
   /@emotion/memoize/0.7.5:
     resolution: {integrity: sha512-igX9a37DR2ZPGYtV6suZ6whr8pTFtyHL3K/oLUotxpSVO2ASaprmAe2Dkq7tBo7CRY7MMDrAa9nuQP9/YG8FxQ==}
+    dev: true
+
+  /@emotion/primitives-core/11.0.0_0381be9ef9d4f3389e973d8e2731d4a2:
+    resolution: {integrity: sha512-4zpfUV7hz9A+j7Hcyiend3LEtRogDXDtMzQy8LOoU39Mw5ntgvTlYQSPbQSzs98BJty/F9Ybyg3pBzFDdMpmDg==}
+    peerDependencies:
+      '@emotion/react': ^11.0.0-rc.0
+      react: '>=16.8.0'
+    dependencies:
+      '@emotion/react': 11.9.0_e7c53be29d0cf33e05dfabbe0af5a24f
+      css-to-react-native: 3.0.0
+      react: 18.0.0
+    dev: true
+
+  /@emotion/primitives/11.0.0_696d72bcadebaaf341e06790272f8628:
+    resolution: {integrity: sha512-wBbt+apz6SevSnSMb4AF46LlZ9+v6zUjaxTh7Yvhza/GqFN0UO7GeEIU6nA00AR78A1O6EeoCrKkW0mkSzONRg==}
+    peerDependencies:
+      '@babel/core': ^7.0.0
+      react: '>=16.8.0'
+      react-primitives: ^0.8.1
+    peerDependenciesMeta:
+      '@babel/core':
+        optional: true
+    dependencies:
+      '@babel/core': 7.17.9
+      '@emotion/babel-plugin': 11.9.2_@babel+core@7.17.9
+      '@emotion/is-prop-valid': 1.1.2
+      '@emotion/primitives-core': 11.0.0_0381be9ef9d4f3389e973d8e2731d4a2
+      react: 18.0.0
+    transitivePeerDependencies:
+      - '@emotion/react'
     dev: true
 
   /@emotion/react/11.9.0_e7c53be29d0cf33e05dfabbe0af5a24f:
@@ -887,6 +945,10 @@ packages:
     engines: {node: '>=6'}
     dev: true
 
+  /camelize/1.0.0:
+    resolution: {integrity: sha1-FkpUg+Yw+kMh5a8HAg5TGDGyYJs=}
+    dev: true
+
   /caniuse-lite/1.0.30001332:
     resolution: {integrity: sha512-10T30NYOEQtN6C11YGg411yebhvpnC6Z102+B95eAsN0oB6KUs01ivE8u+G6FMIRtIrVlYXhL+LUwQ3/hXwDWw==}
     dev: true
@@ -1027,6 +1089,19 @@ packages:
       path-key: 3.1.1
       shebang-command: 2.0.0
       which: 2.0.2
+    dev: true
+
+  /css-color-keywords/1.0.0:
+    resolution: {integrity: sha1-/qJhbcZ2spYmhrOvjb2+GAskTgU=}
+    engines: {node: '>=4'}
+    dev: true
+
+  /css-to-react-native/3.0.0:
+    resolution: {integrity: sha512-Ro1yETZA813eoyUp2GDBhG2j+YggidUmzO1/v9eYBKR2EHVEniE2MI/NqpTQ954BMpTPZFsGNPm46qFB9dpaPQ==}
+    dependencies:
+      camelize: 1.0.0
+      css-color-keywords: 1.0.0
+      postcss-value-parser: 4.2.0
     dev: true
 
   /css.escape/1.5.1:
@@ -2631,6 +2706,10 @@ packages:
     dependencies:
       lilconfig: 2.0.5
       yaml: 1.10.2
+    dev: true
+
+  /postcss-value-parser/4.2.0:
+    resolution: {integrity: sha512-1NNCs6uurfkVbeXG4S8JFT9t19m45ICnif8zWLd5oPSZ50QnwMfK+H3jv408d4jw/7Bttv5axS5IiHoLaVNHeQ==}
     dev: true
 
   /postcss/8.4.12:

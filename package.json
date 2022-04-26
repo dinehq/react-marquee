@@ -34,7 +34,9 @@
   "devDependencies": {
     "@babel/core": "^7.17.9",
     "@dinehq/project-config": "^1.0.1",
+    "@emotion/css": "^11.9.0",
     "@emotion/react": "^11.9.0",
+    "@emotion/serialize": "^1.0.3",
     "@types/jest": "^27.4.1",
     "@types/node": "^17.0.26",
     "@types/react": "^18.0.6",
@@ -64,6 +66,7 @@
     "access": "public"
   },
   "peerDependencies": {
+    "@emotion/css": "^11.9.0",
     "@emotion/react": "^11.9.0"
   },
   "peerDependenciesMeta": {
